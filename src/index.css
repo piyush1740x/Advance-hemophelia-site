@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Container for the scrolling text */
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  padding: 10px 0;
+}
+
+/* The scrolling text */
+.scroll-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 10s linear infinite;
+}
+
+/* Keyframes for scrolling effect */
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%); /* Start from the right */
+  }
+  to {
+    transform: translateX(-100%); /* End at the left */
+  }
+}
