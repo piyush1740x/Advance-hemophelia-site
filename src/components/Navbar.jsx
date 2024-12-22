@@ -30,7 +30,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden block text-4xl focus:outline-none"
+          className="md:hidden block text-3xl focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? "✕" : "☰"}
