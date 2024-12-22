@@ -14,7 +14,7 @@ const Symptoms = () => {
     <section id="symptoms" className="py-16  bg-red-50">
       <div className=" container mx-auto px-4">
         {/* Image Styling */}
-        <div className="mb-8 anm1">
+        <div className="mb-8">
           <img
             src="https://hemophilianewstoday.com/wp-content/uploads/2023/10/MOST-COMMON-SYMPTOMS-OF-HEMOPHILIA-533x800.png"
             alt="Symptoms"
