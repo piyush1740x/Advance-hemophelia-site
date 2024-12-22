@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  padding: 10px 0;
+}
+
+/* 1st effect */
+@keyframes right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.anm1 {
+  animation: right linear;
+  animation-timeline: view();
+  animation-range: entry 10% cover 40% ;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%); /* Starts off to the left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Moves to its original position */
+  }
+}
+
+.anm2 {
+  /* animation: appear 1s ease-out forwards; */
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 10% cover 40% ;
+}
+
+@keyframes text {
+  0% {
+    opacity: 0;
+
+  }
+  100% {
+    opacity: 100;
+
+  }
+}
+.anm3 {
+  animation: appear 1s ease-out forwards;
+  animation: text linear;
+  animation-timeline: view();
+  animation-range: entry 10% cover 40% ;
+}
