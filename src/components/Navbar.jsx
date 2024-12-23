@@ -23,14 +23,14 @@ const Navbar = () => {
           <img
             src="/images/logo.jpeg"
             alt="Logo"
-            className="h-12 rounded-full"
+            className="h-10 rounded-full"
           />
           <h1 className="text-xl font-bold">Hemophilia Welfare <br /> Society Gorakhpur</h1>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden block text-3xl focus:outline-none"
+          className="md:hidden block text-xl focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? "✕" : "☰"}
