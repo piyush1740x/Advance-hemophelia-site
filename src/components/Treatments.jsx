@@ -7,7 +7,7 @@ const Treatment = () => {
         <h2 className="text-3xl font-bold text-center text-red-600 mb-8">हेमोफिलिया का उपचार</h2>
         
         {/* Image Styling */}
-        <div className="mb-8 anm1">
+        <div className="mb-8 anm3">
           <img
             src="https://www.quanticate.com/hs-fs/hubfs/Human%20Gene%20Therapy%20Hemophilia%20Clinical%20Trials%20and%20FDA%20Guidance.jpg?width=1384&name=Human%20Gene%20Therapy%20Hemophilia%20Clinical%20Trials%20and%20FDA%20Guidance.jpg"
             alt="Treatment"
