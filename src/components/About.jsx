@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <section id="about" className=" m-8 anm2 bg-gray-50">
+    <section id="about" className=" m-8 anm3 bg-gray-50">
       <div className="container mx-auto flex flex-col items-center text-center bg-white shadow-lg rounded-lg p-8 max-w-3xl">
         {/* Title */}
         <h2 className="text-4xl font-bold text-red-600 mb-4">हिमोफीलिया के बारे में</h2>
