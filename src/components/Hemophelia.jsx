@@ -23,7 +23,7 @@ const HemophiliaInfo = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+    <div className="max-w-4xl mt-11 mx-auto p-6 bg-white shadow-lg rounded-lg">
       {/* Title */}
       <h1 className="text-3xl font-semibold text-center text-red-600 mb-6">
         हिमोफीलिया के बारे में जानकारी
@@ -39,7 +39,7 @@ const HemophiliaInfo = () => {
         />
         <p className="text-lg text-gray-800 mt-4">
           हिमोफीलिया एक दुर्लभ आनुवंशिक रक्तस्राव विकार है जिसमें रक्त का थक्का बनने की प्रक्रिया बाधित होती है। 
-          यह मुख्य रूप से पुरुषों में पाया जाता है, लेकिन महिलाएं वाहक हो सकती हैं।
+          यह मुख्य रूप से पुरुषों में पाया जाता है, लेकिन महिलाएं वाहक होती हैं।
         </p>
       </div>
 

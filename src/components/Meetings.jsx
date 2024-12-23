@@ -4,28 +4,37 @@ import { useNavigate } from "react-router-dom";
 const meetingsData = [
   {
     id: 1,
-    name: "Hemophilia Awareness Workshop",
-    date: "2024-01-15",
-    distribution: "Distribution of pamphlets, educational materials, and medical kits.",
-    image: "/images/meeting1.jpg",
-    details: "This workshop was aimed at spreading awareness about Hemophilia and providing medical kits to patients.",
+    name: ".......",
+    date: ".......",
+    distribution: "........",
+    image: "/.......",
+    details: "..........",
   },
   {
     id: 2,
-    name: "Hemophilia Support Group Meeting",
-    date: "2024-03-10",
-    distribution: "Distribution of support group guidelines and emotional support materials.",
-    image: "/images/meeting2.jpg",
-    details: "A meeting to provide emotional support and share resources with Hemophilia patients and their families.",
+    name: ".......",
+    date: ".......",
+    distribution: "........",
+    image: "/.......",
+    details: "..........",
   },
   {
     id: 3,
-    name: "Annual Hemophilia Fundraiser",
-    date: "2024-06-25",
-    distribution: "Funds raised for treatment and awareness campaigns.",
-    image: "/images/meeting3.jpg",
-    details: "A fundraiser to support Hemophilia treatments and awareness campaigns across the country.",
+    name: ".......",
+    date: ".......",
+    distribution: "........",
+    image: "/.......",
+    details: "..........",
   },
+  {
+    id: 4,
+    name: ".......",
+    date: ".......",
+    distribution: "........",
+    image: "/.......",
+    details: "..........",
+  },
+ 
 ];
 
 const Meetings = () => {
@@ -50,7 +59,7 @@ const Meetings = () => {
               <img
                 src={meeting.image}
                 alt={meeting.name}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover" 
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">

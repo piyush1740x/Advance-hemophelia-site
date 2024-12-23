@@ -27,12 +27,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-red-200 to-red-100 text-black py-12 px-2">
+    <div className="bg-gradient-to-r mt-5 from-red-200 to-red-100 text-black py-12 px-2">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6">
+        <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6 anm3">
           हीमोफीलिया जागरूकता में शामिल हों
         </h2>
-        <p className="text-lg md:text-xl text-gray-700 mb-8">
+        <p className="text-lg md:text-xl text-gray-700 mb-8 anm3">
           आपका सहयोग और प्रश्न हमारे लिए मूल्यवान हैं। अधिक जानकारी, सहयोग या यह
           जानने के लिए कि आप हीमोफीलिया के बारे में जागरूकता बढ़ाने में कैसे मदद
           कर सकते हैं, हमसे संपर्क करें।

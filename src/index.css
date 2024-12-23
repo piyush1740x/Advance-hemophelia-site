@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Container for the scrolling text */
 .scroll-container {
   width: 100%;
   overflow: hidden;
@@ -10,19 +9,55 @@
   padding: 10px 0;
 }
 
-/* The scrolling text */
-.scroll-text {
-  display: inline-block;
-  white-space: nowrap;
-  animation: scroll-left 10s linear infinite;
+/* 1st effect */
+@keyframes right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.anm1 {
+  animation: appear 1s ease-out forwards;
+  animation: right linear;
+  animation-timeline: view();
+  animation-range: entry 10% cover 40% ;
 }
 
-/* Keyframes for scrolling effect */
-@keyframes scroll-left {
-  from {
-    transform: translateX(100%); /* Start from the right */
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%); /* Starts off to the left */
   }
-  to {
-    transform: translateX(-100%); /* End at the left */
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Moves to its original position */
   }
+}
+
+.anm2 {
+  animation: appear 1s ease-out forwards;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 10% cover 40% ;
+}
+
+@keyframes text {
+  0% {
+    opacity: 0;
+
+  }
+  100% {
+    opacity: 100;
+
+  }
+}
+.anm3 {
+  animation: appear 1s ease-out forwards;
+  animation: text linear;
+  animation-timeline: view();
+  animation-range: entry 10% cover 40% ;
 }

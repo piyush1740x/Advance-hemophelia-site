@@ -1,5 +1,6 @@
 import React from "react";
 import TreatmentBtn from "./TreatmentBtn";
+import Symptom2Btn from "./Symptom2Btn";
 
 const Symptoms = () => {
   const symptoms = [
@@ -10,7 +11,7 @@ const Symptoms = () => {
   ];
 
   return (
-    <section id="symptoms" className="py-16 bg-red-50">
+    <section id="symptoms" className="py-16  bg-red-50">
       <div className=" container mx-auto px-4">
         {/* Image Styling */}
         <div className="mb-8">
@@ -31,10 +32,10 @@ const Symptoms = () => {
           {symptoms.map((symptom, index) => (
             <li
               key={index}
-              className="bg-white p-6 shadow-lg rounded-lg text-gray-700 hover:shadow-xl transition-shadow duration-300 transform hover:scale-105"
+              className="bg-white anm2 p-6 shadow-lg rounded-lg text-gray-700 hover:shadow-xl transition-shadow duration-300 transform hover:scale-105"
             >
               <span className="block text-lg font-semibold mb-2 text-red-600">
-                {`लक्षण ${index + 1}`}
+                {`लक्षण ${index + 1 }`}
               </span>
               <p className="text-gray-600">{symptom}</p>
             </li>
@@ -51,11 +52,7 @@ const Symptoms = () => {
           </a>
         </div>
       </div>
-
-      {/* Treatment Button */}
-      <div className="mt-12">
-        <TreatmentBtn />
-      </div>
+      <Symptom2Btn/>
     </section>
   );
 };
