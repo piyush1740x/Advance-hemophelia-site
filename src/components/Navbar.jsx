@@ -108,7 +108,7 @@ const Navbar = () => {
             <img
               src="/images/logo.jpeg"
               alt="Logo"
-              className="h-10 rounded-full mx-auto mb-2"
+              className="h-12 w-12 rounded-full mx-auto mb-2"
             />
             <p className="text-sm">Hemophilia Welfare Society Gorakhpur</p>
           </div>
