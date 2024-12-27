@@ -15,13 +15,15 @@ const formatDate = (date) => {
 };
 
 // Meeting Data (You can update this easily in the future)
-const meetingData = [];
+const meetingData = [
+  
+];
 
 const NextMeeting = () => {
   return (
     <section
       id="next-meeting"
-      className="py-16 bg-gradient-to-r from-red-200 via-red-100 to-red-50"
+      className="py-10 bg-gradient-to-r from-red-200 via-red-100 to-red-50"
     >
       <div className="container mx-auto px-4">
         {meetingData.length > 0 ? (
@@ -68,8 +70,8 @@ const NextMeeting = () => {
             ))}
           </div>
         ) : (
-          <div className="flex flex-col items-center justify-center text-center py-12">
-            <h3 className="text-3xl font-bold text-red-700 mb-4">
+          <div className="flex flex-col items-center justify-center text-center ">
+            <h3 className="text-2xl font-bold text-red-700 mb-4">
               <Typewriter
                 words={[
                   "अभी तक कोई बैठक निर्धारित नहीं है.",
@@ -83,12 +85,13 @@ const NextMeeting = () => {
                 delaySpeed={1000}
               />
             </h3>
-            <p className="text-lg text-gray-600 bg-yellow-50 px-6 py-4 rounded-lg shadow-md">
+            <p className=" mt-2 text-gray-600 bg-yellow-50 px-3 py-3 rounded-lg shadow-md">
               कृपया भविष्य में अद्यतन के लिए वापस आएं।
             </p>
           </div>
         )}
       </div>
+      
     </section>
   );
 };

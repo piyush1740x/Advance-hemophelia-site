@@ -9,11 +9,12 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Meetings from "./components/Meetings";
 import HemophiliaInfo from "./components/Hemophelia";
-import HemophiliaTreatment from "./components/HemophiliaTreatment"
+import HemophiliaTreatment from "./components/HemophiliaTreatment";
+import NextMeeting from "./components/NextMeeting";
+import HemophiliaSymptoms from "./components/HemophiliaSymptoms";
+import Camps from "./components/Camps"; // Import the Camps component
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import NextMeeting from "./components/NextMeeting";
-import HemophiliaSymptoms from "./components/HemophiliaSymptoms"
 
 const App = () => {
   return (
@@ -25,10 +26,10 @@ const App = () => {
           element={
             <>
               <Hero />
-              <NextMeeting/>
+              <NextMeeting />
               <About />
               <Symptoms />
-               <Treatment/>
+              <Treatment />
               <Contact />
             </>
           }
@@ -39,9 +40,10 @@ const App = () => {
         <Route path="/symptoms" element={<Symptoms />} />
         <Route path="/treatment" element={<Treatment />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/hemophelia" element={<HemophiliaInfo/>} />
-        <Route path="/HemophiliaTreatment" element={<HemophiliaTreatment/>} />
-        <Route path="/HemophiliaSymptoms" element={<HemophiliaSymptoms/>} />
+        <Route path="/hemophelia" element={<HemophiliaInfo />} />
+        <Route path="/HemophiliaTreatment" element={<HemophiliaTreatment />} />
+        <Route path="/HemophiliaSymptoms" element={<HemophiliaSymptoms />} />
+        <Route path="/camps" element={<Camps />} /> {/* New route for Camps */}
       </Routes>
       <Footer />
     </Router>

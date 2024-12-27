@@ -94,6 +94,16 @@ const Navbar = () => {
           </li>
           <li className="mx-4 my-6 md:my-0">
             <Link
+              to="/Camps"
+              className="hover:underline flex items-center space-x-2 py-2 md:py-0"
+              onClick={() => setIsOpen(false)}
+            >
+              <i class="fa-solid fa-tent-arrows-down"></i>
+              <span>Camps</span>
+            </Link>
+          </li>
+          <li className="mx-4 my-6 md:my-0">
+            <Link
               to="/contact"
               className="hover:underline flex items-center space-x-2 py-2 md:py-0"
               onClick={() => setIsOpen(false)}

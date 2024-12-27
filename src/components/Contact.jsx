@@ -1,4 +1,5 @@
 import React from "react";
+import { FaWhatsapp, FaPhoneAlt, FaFacebook } from "react-icons/fa"; // Import the icons
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
@@ -29,18 +30,27 @@ const Contact = () => {
   return (
     <div className="bg-gradient-to-r mt-5 from-red-200 to-red-100 text-black py-12 px-2">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6 anm3">
+        <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6 ">
           हीमोफीलिया जागरूकता में शामिल हों
         </h2>
-        <p className="text-lg md:text-xl text-gray-700 mb-8 anm3">
+        <p className="text-lg md:text-xl text-gray-700 mb-8">
           आपका सहयोग और प्रश्न हमारे लिए मूल्यवान हैं। अधिक जानकारी, सहयोग या यह
           जानने के लिए कि आप हीमोफीलिया के बारे में जागरूकता बढ़ाने में कैसे मदद
           कर सकते हैं, हमसे संपर्क करें।
         </p>
         <div className="flex justify-center space-x-6 text-3xl mb-8">
-         
+          <a className="text-4xl" href="https://wa.me/8486452572" target="_blank" rel="noopener noreferrer">
+            <FaWhatsapp className="text-green-500 hover:text-green-400 transition duration-300" />
+          </a>
+          <a href="tel:+8486452572" target="_blank" rel="noopener noreferrer">
+            <FaPhoneAlt className="text-blue-500 hover:text-blue-400 transition duration-300" />
+          </a>
+          <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">
+            <FaFacebook className="text-blue-600 hover:text-blue-500 transition duration-300" />
+          </a>
         </div>
       </div>
+      
       <div className="p-8 mt-8 mx-auto max-w-lg bg-gray-800 rounded-lg shadow-lg">
         <img className="h-12 w-12 rounded-full mx-auto mb-4" src="/images/logo.jpeg" alt="Logo" />
         <h1 className="text-3xl text-white font-bold text-center mb-6">
