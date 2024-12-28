@@ -25,7 +25,7 @@ const Navbar = () => {
             alt="Logo"
             className="h-10 rounded-full"
           />
-          <h1 className="text-sm font-bold">Hemophilia Welfare <br /> Society Gorakhpur</h1>
+          <h1 className="text-md font-bold">Hemophilia Welfare <br /> Society Gorakhpur</h1>
         </div>
 
         {/* Mobile Menu Button */}

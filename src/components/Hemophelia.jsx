@@ -23,7 +23,7 @@ const HemophiliaInfo = () => {
   };
 
   return (
-    <div className="max-w-4xl mt-11 mx-auto p-6 bg-white shadow-lg rounded-lg">
+    <div className="max-w-4xl mt-13 mx-auto p-6 bg-white shadow-lg rounded-lg">
       {/* Title */}
       <h1 className="text-3xl font-semibold text-center text-red-600 mb-6">
         हिमोफीलिया के बारे में जानकारी

@@ -3,27 +3,31 @@ import { FaWhatsapp, FaPhoneAlt, FaFacebook } from "react-icons/fa"; // Import t
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
-
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending....");
-    const formData = new FormData(event.target);
+    setResult("Sending...");
 
+    const formData = new FormData(event.target);
     formData.append("access_key", "eaa0ceb4-b696-4047-b46c-7063b42eeb03");
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    const data = await response.json();
+      const data = await response.json();
 
-    if (data.success) {
-      setResult("Form Submitted Successfully");
-      event.target.reset();
-    } else {
-      console.log("Error", data);
-      setResult(data.message);
+      if (data.success) {
+        setResult("You sent your message to Shailesh gupta, Succesfully");
+        event.target.reset();
+      } else {
+        console.log("Error", data);
+        setResult(data.message || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Network error:", error);
+      setResult("Failed to send message. Please check your network connection.");
     }
   };
 
@@ -45,7 +49,7 @@ const Contact = () => {
           <a href="tel:+8486452572" target="_blank" rel="noopener noreferrer">
             <FaPhoneAlt className="text-blue-500 hover:text-blue-400 transition duration-300" />
           </a>
-          <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/people/Shailesh-Gupta/pfbid025vXEcunaVjkJt9Va3za16A7PHWiwDxJ9GSWwKpc8ktMWhiVty7PnDCGpcYJEm5FPl/" target="_blank" rel="noopener noreferrer">
             <FaFacebook className="text-blue-600 hover:text-blue-500 transition duration-300" />
           </a>
         </div>

@@ -45,15 +45,15 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="relative w-full mt-28 mb-0 h-96 sm:h-72 md:h-96">
+    <div className="relative w-full mt-10 mb-10">
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div key={index} className="flex justify-center items-center p-4">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full h-full max-w-md">
+          <div key={index} className="flex justify-center items-center">
+            <div className="bg-gray-100 rounded-lg shadow-lg overflow-hidden w-full max-w-4xl h-80 md:h-96">
               <img
                 src={image}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-64 object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>

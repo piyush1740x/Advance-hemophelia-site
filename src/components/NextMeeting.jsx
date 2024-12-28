@@ -80,9 +80,9 @@ const NextMeeting = () => {
                 loop={true}
                 cursor
                 cursorStyle="|"
-                typeSpeed={120}
+                typeSpeed={50}
                 deleteSpeed={80}
-                delaySpeed={1000}
+                delaySpeed={1200}
               />
             </h3>
             <p className=" mt-2 text-gray-600 bg-yellow-50 px-3 py-3 rounded-lg shadow-md">
