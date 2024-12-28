@@ -19,7 +19,7 @@ const Footer = () => {
         {/* Contact Information */}
         <div className="text-center md:text-right">
           <p className="text-sm">Phone: +91-8486452572</p>
-          <p className="text-sm">Email: info@hemophilia.org</p>
+          <p className="text-sm">Email: shailesh999876@gmail.com</p>
           <p className="text-sm">
             WhatsApp:{" "}
             <a

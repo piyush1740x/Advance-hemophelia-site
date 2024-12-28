@@ -53,12 +53,17 @@ const ImageSlider = () => {
               <img
                 src={image}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-lg transition-transform transform hover:scale-105"
               />
             </div>
           </div>
         ))}
       </Slider>
+
+      {/* Message at the bottom */}
+      <div className="w-full bg-red-600 text-white text-center py-4 mt-6">
+        <h2 className="text-xl font-semibold">कृपया कोई भी पेज रिफ्रेश ना करे</h2>
+      </div>
     </div>
   );
 };

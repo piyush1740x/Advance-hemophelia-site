@@ -12,9 +12,11 @@ import HemophiliaInfo from "./components/Hemophelia";
 import HemophiliaTreatment from "./components/HemophiliaTreatment";
 import NextMeeting from "./components/NextMeeting";
 import HemophiliaSymptoms from "./components/HemophiliaSymptoms";
-import Camps from "./components/Camps"; // Import the Camps component
+import Camps from "./components/Camps";
+import News from "./components/News";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import FactorAvailability from "./FactorAvailability";
 
 const App = () => {
 
@@ -28,6 +30,8 @@ const App = () => {
             <>
               <Hero />
               <NextMeeting />
+              <FactorAvailability/>
+              <News/>
               <About />
               <Symptoms />
               <Treatment />
@@ -35,7 +39,6 @@ const App = () => {
             </>
           }
         />
-        {/* Individual routes for other components */}
         <Route path="/meetings" element={<Meetings />} />
         <Route path="/about" element={<About />} />
         <Route path="/symptoms" element={<Symptoms />} />
