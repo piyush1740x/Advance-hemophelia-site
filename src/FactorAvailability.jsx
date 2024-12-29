@@ -5,7 +5,7 @@ const FactorAvailability = () => {
     {
       name: "BRD Madical College",
       location: "गोरखपुर",
-      factors: { factor8: true, factor9: true, factor7: false },
+      factors: { factor8: true, factor9: true, factor7: true},
     },
     
   ];
