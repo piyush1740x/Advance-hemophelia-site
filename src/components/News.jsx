@@ -22,7 +22,7 @@ const News = () => {
   };
 
   return (
-    <section className="bg-gray-100 py-10 px-5">
+    <section className="bg-gray-100 anm3  py-10 px-5">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-red-600 mb-6">
           ताज़ा खबरें

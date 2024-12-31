@@ -32,7 +32,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r mt-5 from-red-200 to-red-100 text-black py-12 px-2">
+    <div className="bg-gradient-to-r mt-10 from-red-200 to-red-100 text-black py-12 px-2">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6 ">
           हीमोफीलिया जागरूकता में शामिल हों

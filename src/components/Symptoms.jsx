@@ -11,14 +11,14 @@ const Symptoms = () => {
   ];
 
   return (
-    <section id="symptoms" className="py-16  bg-red-50">
-      <div className=" container mx-auto px-4">
+    <section id="symptoms" className="py-16 anm3  bg-red-50">
+      <div className=" container mx-auto  px-4">
         {/* Image Styling */}
         <div className="mb-8">
           <img
             src="https://hemophilianewstoday.com/wp-content/uploads/2023/10/MOST-COMMON-SYMPTOMS-OF-HEMOPHILIA-533x800.png"
             alt="Symptoms"
-            className="w-full h-auto rounded-lg shadow-xl object-cover transition-all duration-300 transform hover:scale-105"
+            className="w-full  h-auto rounded-lg shadow-xl object-cover transition-all duration-300 transform hover:scale-105"
           />
         </div>
 

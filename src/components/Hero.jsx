@@ -45,7 +45,7 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="relative w-full mt-10 mb-10">
+    <div className="relative w-full mt-12 mb-10">
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index} className="flex justify-center items-center">

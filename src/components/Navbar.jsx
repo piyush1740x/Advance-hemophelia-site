@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { loginWithRedirect, logout, user, isAuthenticated, isLoading }=useAuth0();
 
   React.useEffect(() => {
     if (isOpen) {
@@ -25,7 +27,9 @@ const Navbar = () => {
             alt="Logo"
             className="h-10 rounded-full"
           />
-          <h1 className="text-md font-bold">Hemophilia Welfare <br /> Society Gorakhpur</h1>
+          <h1 className="text-md font-bold">
+            Hemophilia Welfare <br /> Society Gorakhpur
+          </h1>
         </div>
 
         {/* Mobile Menu Button */}
@@ -98,7 +102,7 @@ const Navbar = () => {
               className="hover:underline flex items-center space-x-2 py-2 md:py-0"
               onClick={() => setIsOpen(false)}
             >
-              <i class="fa-solid fa-tent-arrows-down"></i>
+              <i className="fa-solid fa-tent-arrows-down"></i>
               <span>Camps</span>
             </Link>
           </li>
@@ -112,6 +116,29 @@ const Navbar = () => {
               <span>Contact</span>
             </Link>
           </li>
+
+          {/* Authentication */}
+          {isAuthenticated ? (
+            <li className="mx-4 my-6 md:my-0">
+              <button
+                className="bg-red-500 text-white font-bold py-2 px-4 rounded-md hover:bg-white hover:text-red-600 transition duration-300 md:ml-4"
+                onClick={() =>
+                  logout({ logoutParams: { returnTo: window.location.origin } })
+                }
+              >
+                Log Out
+              </button>
+            </li>
+          ) : (
+            <li className="mx-4 my-6 md:my-0">
+              <button
+                className="bg-white text-red-600 font-bold py-2 px-4 rounded-md hover:bg-red-500 hover:text-white transition duration-300 md:ml-4"
+                onClick={() => loginWithRedirect()}
+              >
+                Login
+              </button>
+            </li>
+          )}
 
           {/* Logo at the Bottom */}
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center md:hidden">

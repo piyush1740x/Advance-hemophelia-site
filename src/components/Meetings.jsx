@@ -10,31 +10,7 @@ const meetingsData = [
     image: "/.......",
     details: "..........",
   },
-  {
-    id: 2,
-    name: ".......",
-    date: ".......",
-    distribution: "........",
-    image: "/.......",
-    details: "..........",
-  },
-  {
-    id: 3,
-    name: ".......",
-    date: ".......",
-    distribution: "........",
-    image: "/.......",
-    details: "..........",
-  },
-  {
-    id: 4,
-    name: ".......",
-    date: ".......",
-    distribution: "........",
-    image: "/.......",
-    details: "..........",
-  },
- 
+  
 ];
 
 const Meetings = () => {
@@ -45,7 +21,7 @@ const Meetings = () => {
   };
 
   return (
-    <div className="bg-gray-100 py-16 px-8">
+    <div className="bg-gray-100 mt-10 py-16 px-8">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-red-600 mb-8">Meetings & Events</h2>
         <p className="text-lg text-gray-700 mb-12">
