@@ -8,9 +8,9 @@ const UserName = () => {
   const defaultDp = "/images/default.jpg"; // Make sure the image is in the public/images folder
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 p-6">
       {isAuthenticated ? (
-        <div className="bg-white rounded-lg shadow-lg w-full text-center">
+        <div className="bg-white p-6 rounded-lg shadow-lg w-full text-center">
           <img 
             src={user.picture || defaultDp}  // Use default image if no user picture
             alt={user.name} 
