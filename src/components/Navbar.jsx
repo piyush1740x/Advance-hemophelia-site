@@ -4,7 +4,8 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { loginWithRedirect, logout, user, isAuthenticated, isLoading }=useAuth0();
+  const { loginWithRedirect, logout, user, isAuthenticated, isLoading } =
+    useAuth0();
 
   React.useEffect(() => {
     if (isOpen) {
@@ -18,16 +19,16 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <nav className="bg-red-600 text-white py-3 shadow-md fixed top-0 w-full z-50">
-      <div className="container mx-auto flex justify-between items-center px-4">
+    <nav className="bg-red-600 border text-white p-4 shadow-md fixed top-0 w-full z-50">
+      <div className="container mx-auto flex items-center justify-between  md:px-8 max-w-screen-xl">
         {/* Logo Section */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center gap-2">
           <img
             src="/images/logo.jpeg"
             alt="Logo"
             className="h-10 rounded-full"
           />
-          <h1 className="text-md font-bold">
+          <h1 className="text-md font-bold  sm:block md:block">
             Hemophilia Welfare <br /> Society Gorakhpur
           </h1>
         </div>
@@ -46,76 +47,30 @@ const Navbar = () => {
             isOpen ? "translate-x-0" : "-translate-x-full"
           } md:static md:translate-x-0 md:flex md:bg-transparent md:shadow-none transition-transform duration-300 ease-in-out z-40`}
         >
-          <li className="mx-4 my-6 md:my-0">
-            <Link
-              to="/"
-              className="hover:underline flex items-center space-x-2 py-2 md:py-0"
-              onClick={() => setIsOpen(false)}
-            >
-              <i className="fa-solid fa-house"></i>
-              <span>Home</span>
-            </Link>
-          </li>
-          <li className="mx-4 my-6 md:my-0">
-            <Link
-              to="/meetings"
-              className="hover:underline flex items-center space-x-2 py-2 md:py-0"
-              onClick={() => setIsOpen(false)}
-            >
-              <i className="fa-solid fa-handshake"></i>
-              <span>Meetings</span>
-            </Link>
-          </li>
-          <li className="mx-4 my-6 md:my-0">
-            <Link
-              to="/hemophelia"
-              className="hover:underline flex items-center space-x-2 py-2 md:py-0"
-              onClick={() => setIsOpen(false)}
-            >
-              <i className="fa-solid fa-droplet"></i>
-              <span>Hemophilia</span>
-            </Link>
-          </li>
-          <li className="mx-4 my-6 md:my-0">
-            <Link
-              to="/HemophiliaSymptoms"
-              className="hover:underline flex items-center space-x-2 py-2 md:py-0"
-              onClick={() => setIsOpen(false)}
-            >
-              <i className="fa-solid fa-hand"></i>
-              <span>Symptoms</span>
-            </Link>
-          </li>
-          <li className="mx-4 my-6 md:my-0">
-            <Link
-              to="/HemophiliaTreatment"
-              className="hover:underline flex items-center space-x-2 py-2 md:py-0"
-              onClick={() => setIsOpen(false)}
-            >
-              <i className="fa-solid fa-stethoscope"></i>
-              <span>Treatment</span>
-            </Link>
-          </li>
-          <li className="mx-4 my-6 md:my-0">
-            <Link
-              to="/Camps"
-              className="hover:underline flex items-center space-x-2 py-2 md:py-0"
-              onClick={() => setIsOpen(false)}
-            >
-              <i className="fa-solid fa-tent-arrows-down"></i>
-              <span>Camps</span>
-            </Link>
-          </li>
-          <li className="mx-4 my-6 md:my-0">
-            <Link
-              to="/contact"
-              className="hover:underline flex items-center space-x-2 py-2 md:py-0"
-              onClick={() => setIsOpen(false)}
-            >
-              <i className="fa-solid fa-address-book"></i>
-              <span>Contact</span>
-            </Link>
-          </li>
+          {[
+            { path: "/", label: "Home", icon: "fa-house" },
+            { path: "/meetings", label: "Meetings", icon: "fa-handshake" },
+            { path: "/hemophelia", label: "Hemophilia", icon: "fa-droplet" },
+            { path: "/HemophiliaSymptoms", label: "Symptoms", icon: "fa-hand" },
+            {
+              path: "/HemophiliaTreatment",
+              label: "Treatment",
+              icon: "fa-stethoscope",
+            },
+            { path: "/Camps", label: "Camps", icon: "fa-tent-arrows-down" },
+            { path: "/contact", label: "Contact", icon: "fa-address-book" },
+          ].map(({ path, label, icon }) => (
+            <li key={path} className="mx-4 my-6 md:my-0">
+              <Link
+                to={path}
+                className="hover:underline flex items-center space-x-2 py-2 md:py-0"
+                onClick={() => setIsOpen(false)}
+              >
+                <i className={`fa-solid ${icon}`}></i>
+                <span>{label}</span>
+              </Link>
+            </li>
+          ))}
 
           {/* Authentication */}
           {isAuthenticated ? (
@@ -139,16 +94,6 @@ const Navbar = () => {
               </button>
             </li>
           )}
-
-          {/* Logo at the Bottom */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center md:hidden">
-            <img
-              src="/images/logo.jpeg"
-              alt="Logo"
-              className="h-12 w-12 rounded-full mx-auto mb-2"
-            />
-            <p className="text-sm">Hemophilia Welfare Society Gorakhpur</p>
-          </div>
         </ul>
       </div>
 

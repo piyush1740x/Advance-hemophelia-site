@@ -37,7 +37,7 @@ const HemophiliaInfo = () => {
         <img
           src={images.intro}
           alt="Hemophilia Awareness"
-          className="w-full h-auto rounded-lg shadow-lg cursor-pointer transition-transform transform hover:scale-105"
+          className=" h-auto rounded-lg shadow-lg cursor-pointer transition-transform transform hover:scale-105"
           onClick={() => openImageModal(images.intro)}
         />
         <p className="text-lg text-gray-800 mt-4">
@@ -69,7 +69,7 @@ const HemophiliaInfo = () => {
             <img
               src={images.symptoms}
               alt="Hemophilia Symptoms"
-              className="w-full h-auto rounded-lg shadow-lg cursor-pointer transition-transform transform hover:scale-105"
+              className=" h-auto rounded-lg shadow-lg cursor-pointer transition-transform transform hover:scale-105"
               onClick={() => openImageModal(images.symptoms)}
             />
             <ul className="list-disc pl-6 mt-4 text-gray-700">
@@ -96,7 +96,7 @@ const HemophiliaInfo = () => {
             <img
               src={images.treatment}
               alt="Hemophilia Treatment"
-              className="w-full h-auto rounded-lg shadow-lg cursor-pointer transition-transform transform hover:scale-105"
+              className=" h-auto rounded-lg shadow-lg cursor-pointer transition-transform transform hover:scale-105"
               onClick={() => openImageModal(images.treatment)}
             />
             <p className="text-lg text-gray-700 mt-4">

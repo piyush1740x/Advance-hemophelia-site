@@ -25,7 +25,16 @@ const ImageSlider = () => {
     cssEase: 'ease-in-out',
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1024, // For laptops and desktops
+        settings: {
+          slidesToShow: 1,
+          dots: true,
+          arrows: true,
+          speed: 1500, // Slower transition on larger screens
+        },
+      },
+      {
+        breakpoint: 768, // For tablets and smaller laptops
         settings: {
           slidesToShow: 1,
           dots: true,
@@ -33,7 +42,7 @@ const ImageSlider = () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 480, // For mobile
         settings: {
           slidesToShow: 1,
           dots: true,
@@ -45,11 +54,11 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="relative w-full mt-12 mb-10">
+    <div className="relative w-full mt-16 mb-10">
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index} className="flex justify-center items-center">
-            <div className="bg-gray-100 rounded-lg shadow-lg overflow-hidden w-full max-w-4xl h-80 md:h-96">
+            <div className="bg-gray-100 rounded-lg shadow-lg overflow-hidden w-full max-w-full h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px]">
               <img
                 src={image}
                 alt={`Slide ${index + 1}`}
@@ -62,7 +71,9 @@ const ImageSlider = () => {
 
       {/* Message at the bottom */}
       <div className="w-full bg-red-600 text-white text-center py-4 mt-6">
-        <h2 className="text-xl font-semibold">कृपया कोई भी पेज रिफ्रेश ना करे</h2>
+        <h2 className="text-sm md:text-lg lg:text-xl font-semibold px-4">
+          कृपया कोई भी पेज रिफ्रेश ना करे
+        </h2>
       </div>
     </div>
   );
