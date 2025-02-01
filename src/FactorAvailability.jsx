@@ -28,7 +28,7 @@ const FactorAvailability = () => {
     {
       name: "KGMU",
       location: "लखनऊ",
-      factors: { factor8: true, factor9: true, factor7: false },
+      factors: { factor8: false, factor9: false, factor7: false },
     },
   ];
 
