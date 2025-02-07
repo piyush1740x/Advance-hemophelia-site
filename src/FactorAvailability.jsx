@@ -8,7 +8,7 @@ const FactorAvailability = () => {
     {
       name: "BRD Medical College",
       location: "गोरखपुर",
-      factors: { factor8: false, factor9: true, factor7: true },
+      factors: { factor8: true, factor9: true, factor7: true },
     },
     {
       name: "District Hospital",
