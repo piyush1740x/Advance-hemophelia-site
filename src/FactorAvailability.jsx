@@ -13,7 +13,7 @@ const FactorAvailability = () => {
     {
       name: "District Hospital",
       location: "बस्ती",
-      factors: { factor8: true, factor9: true, factor7: false },
+      factors: { factor8: false, factor9: false, factor7: false },
     },
     {
       name: "Mini PGI",
