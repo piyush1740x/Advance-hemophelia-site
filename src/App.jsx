@@ -10,13 +10,13 @@ import Footer from "./components/Footer";
 import Meetings from "./components/Meetings";
 import HemophiliaInfo from "./components/Hemophelia";
 import HemophiliaTreatment from "./components/HemophiliaTreatment";
-import NextMeeting from "./components/NextMeeting";
+// import NextMeeting from "./components/NextMeeting";
 import HemophiliaSymptoms from "./components/HemophiliaSymptoms";
 import Camps from "./components/Camps";
 import News from "./components/News";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import FactorAvailability from "./FactorAvailability";
+// import FactorAvailability from "./FactorAvailability";
 import UserName from "./components/UserName";
 
 const App = () => {
@@ -31,8 +31,8 @@ const App = () => {
             <>
               <Hero />
               <UserName/>
-              <NextMeeting />
-              <FactorAvailability/>
+              {/* <NextMeeting /> */}
+              {/* <FactorAvailability/> */}
               <News/>
               <About />
               <Symptoms />
